@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background: #ff9966;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ff5e62, #ff9966);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+header .container .inner {
+  background: #f37335;
+  padding: 1em;
+  border-radius: 10px;
+  width: 250px;
+  -webkit-clip-path: circle(10% at 90% 20%);
+          clip-path: circle(10% at 90% 20%);
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+header .container .inner:hover {
+  -webkit-clip-path: circle(75%);
+          clip-path: circle(75%);
+  background: #00b6ff;
+}
+
+header .container .inner h2 {
+  color: white;
+  margin: 0;
+}
+
+header .container .inner p {
+  color: white;
+  font-size: 0.8rem;
+}
+
+header .container .inner span {
+  float: right;
+  color: white;
+  font-weight: bold;
+  transition: color 0.5s;
+  position: relative;
+  margin-right: 4%;
+}
+
+header .container .inner:hover span {
+  color: rgba(255, 255, 255, 0);
+}
+
+.main .container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.main .container button {
+  border: 0;
+  background-color: transparent;
+  padding: 30px;
+}
+
+.main .container button i {
+  color: white;
+  font-size: 90px;
+}
+
+.main .container button:hover i {
+  transform: scale(1.2);
+}
+
+.main .container .info {
+  font-size: 20px;
+  color: #fff;
+  line-height: 1.5;
+}
+/*# sourceMappingURL=style.css.map */

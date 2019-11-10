@@ -5,16 +5,32 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
 		<title>Kamień, papier, nożyce</title>
 	</head>
 	<body>
-		<div class="container">
-			<div id="buttons">
-				<button class="buttons" id="play-rock">KAMIEŃ</button>
-				<button class="buttons" id="olay-paper">PAPIER</button>
-				<button class="buttons" id="play-scissors">NOŻYCE</button>
-			<div id="messages"></div>
-		</div>
+		<HEADER>
+			<h1>KAMIEŃ! PAPIER! NOŻYCE!</h1>
+			<div class="container">
+				<div class="inner">
+						<span>i</span>
+						<h2>instrukcja</h2>
+						<p>nożyce są silniejsze od papieru,<br>
+							kamień jest silniejszy od nożyc,<br>
+							papier jest silniejszy od kamienia.</p>
+					</div>
+			</div>
+		</HEADER>
+		<section class="main">
+			<div class="container">
+				<div id="buttons">
+					<button class="button" id="play-rock"><i class="fas fa-hand-rock"></i></button>
+					<button class="button" id="play-paper"><i class="fas fa-hand-paper"></i></button>
+					<button class="button" id="play-scissors"><i class="fas fa-hand-scissors"></i></button>
+				<div class="info" id="messages"></div>
+			</div>
+		</section>
+		
 		<script src="js/functions.js"></script>
 		<script src="js/script.js"></script>
 	</body>

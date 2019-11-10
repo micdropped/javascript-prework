@@ -69,12 +69,18 @@ if (playerInput == "1") {
 	}
 	displayResult(argComputerMove, argPlayerMove);
 }
-document.getElementById("play-rock").addEventListener("click", function() {
-	playGame(1);
-});
+document
+	.getElementById("play-rock", "play-paper", "play-scissors")
+	.addEventListener("click", function() {
+		playGame(1);
+		playGame(2);
+		playGame(3);
+	});
+/*
 document.getElementById("olay-paper").addEventListener("click", function() {
 	playGame(2);
 });
 document.getElementById("play-scissors").addEventListener("click", function() {
 	playGame(3);
 });
+*/
