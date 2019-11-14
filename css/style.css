@@ -27,18 +27,18 @@ header .container .inner:hover {
 }
 
 header .container .inner h2 {
-  color: white;
+  color: #fff;
   margin: 0;
 }
 
 header .container .inner p {
-  color: white;
+  color: #fff;
   font-size: 0.8rem;
 }
 
 header .container .inner span {
   float: right;
-  color: white;
+  color: #fff;
   font-weight: bold;
   transition: color 0.5s;
   position: relative;
@@ -47,6 +47,28 @@ header .container .inner span {
 
 header .container .inner:hover span {
   color: rgba(255, 255, 255, 0);
+}
+
+header .container .btn .reset-btn {
+  text-decoration: none;
+  color: #fff;
+  border: 5px solid #fff;
+  background: transparent;
+  font-size: 24px;
+  padding: 6px 24px;
+}
+
+.scores {
+  margin: 12px;
+  color: #fff;
+  font-size: 48px;
+}
+
+.scores .container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 
 .main .container {

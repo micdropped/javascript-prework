@@ -1,3 +1,6 @@
+$color-wht: #fff;
+
+
 body {
 	margin: 0;
 	padding: 0;
@@ -32,17 +35,17 @@ header {
 			}
 
 			h2 {
-				color: white;
+				color: $color-wht;
 				margin: 0;
 			}
 
 			p {
-				color: white;
+				color: $color-wht;
 				font-size: 0.8rem;
 			}
 			span {
 				float: right;
-				color: white;
+				color: $color-wht;
 				font-weight: bold;
 				transition: color 0.5s;
 				position: relative;
@@ -52,8 +55,30 @@ header {
 				color: rgba(255, 255, 255, 0);
 			}
 		}
+		.btn {
+			.reset-btn {
+				text-decoration: none;
+				color: $color-wht;
+				border: 5px solid $color-wht;
+				background: transparent;
+				font-size: 24px;
+				padding: 6px 24px;
+			}
+		}
 	}
 }
+
+.scores {
+	margin: 12px;
+	color: $color-wht;
+	font-size: 48px;
+	.container {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+
 
 .main {
 	.container {

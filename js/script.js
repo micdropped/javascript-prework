@@ -1,5 +1,9 @@
+let pScore = 0;
+let cScore = 0;
+
 function playGame(playerInput) {
 	clearMessages();
+	console.log(playerInput);
 	function getMoveName(argMoveId) {
 		if (argMoveId == 1) {
 			return "kamień";
@@ -19,35 +23,15 @@ function playGame(playerInput) {
 	console.log("Wylosowana liczba to: " + randomNumber);
 
 	let argComputerMove = getMoveName(randomNumber);
-	/*
-if (randomNumber == 1) {
-	argComputerMove = "kamień";
-} else if (randomNumber == 2) {
-	argComputerMove = "papier";
-} else if (randomNumber == 3) {
-	argComputerMove = "nożyce";
-}
-*/
+
 	printMessage("Mój ruch to: " + argComputerMove);
 
 	//wywołanie ruchu gracza
-	/*	let playerInput = prompt(
-		"Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce."
-	);
-*/
+
 	console.log("Gracz wpisał: " + playerInput);
 
-	let argPlayerMove = getMoveName(playerInput);
+	let argPlayerMove = playerInput;
 
-	/*
-if (playerInput == "1") {
-	argPlayerMove = "kamień";
-} else if (playerInput == "2") {
-	argPlayerMove = "papier";
-} else if (playerInput == "3") {
-	argPlayerMove = "nożyce";
-}
-*/
 	printMessage("Twój ruch to: " + argPlayerMove);
 
 	//logika gry
@@ -63,24 +47,33 @@ if (playerInput == "1") {
 			(argComputerMove == "nożyce" && argPlayerMove == "kamień")
 		) {
 			printMessage("Gracz wygrywa!");
+			++pScore;
+			document.getElementById("pScore").textContent = pScore;
 		} else {
 			printMessage("Komputer wygrywa!");
+			++cScore;
+			document.getElementById("cScore").textContent = cScore;
 		}
 	}
 	displayResult(argComputerMove, argPlayerMove);
+	console.log(cScore, pScore);
 }
-document
-	.getElementById("play-rock", "play-paper", "play-scissors")
-	.addEventListener("click", function() {
-		playGame(1);
-		playGame(2);
-		playGame(3);
-	});
-/*
-document.getElementById("olay-paper").addEventListener("click", function() {
-	playGame(2);
+
+let reset = document.getElementById("rb");
+reset.addEventListener("click", function () {
+	console.log("test");
+	document.getElementById("pScore").textContent = 0;
+	document.getElementById("cScore").textContent = 0;
 });
-document.getElementById("play-scissors").addEventListener("click", function() {
-	playGame(3);
-});
-*/
+
+
+let buttons = document.getElementsByClassName("button");
+
+for (let i = 0; i < buttons.length; i++) {
+	(function (index) {
+		buttons[index].addEventListener("click", function (event) {
+			console.log(event.currentTarget);
+			playGame(event.currentTarget.id);
+		});
+	})(i);
+}
