@@ -62,8 +62,10 @@ function playGame(playerInput) {
 let reset = document.getElementById("rb");
 reset.addEventListener("click", function () {
 	console.log("test");
-	document.getElementById("pScore").textContent = 0;
-	document.getElementById("cScore").textContent = 0;
+	pScore = 0;
+	cScore = 0;
+	document.getElementById("pScore").textContent = pScore;
+	document.getElementById("cScore").textContent = cScore;
 });
 
 
