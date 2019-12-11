@@ -9,6 +9,27 @@ body {
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+header h1 {
+  color: #fff;
+}
+
+header .btn .reset-btn {
+  text-decoration: none;
+  color: #fff;
+  border: 5px solid #fff;
+  background: transparent;
+  font-size: 24px;
+  padding: 6px 24px;
+}
+
+header .container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  margin: 0 20px;
+}
+
 header .container .inner {
   background: #f37335;
   padding: 1em;
@@ -49,22 +70,24 @@ header .container .inner:hover span {
   color: rgba(255, 255, 255, 0);
 }
 
-header .container .btn .reset-btn {
-  text-decoration: none;
-  color: #fff;
-  border: 5px solid #fff;
-  background: transparent;
-  font-size: 24px;
-  padding: 6px 24px;
-}
-
 .scores {
   margin: 12px;
   color: #fff;
   font-size: 48px;
 }
 
-.scores .container {
+.scores .row-players {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: space-evenly;
+      justify-content: space-evenly;
+}
+
+.scores .row-players span {
+  margin: 0 48px;
+}
+
+.scores .row-score {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;

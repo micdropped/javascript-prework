@@ -61,7 +61,6 @@ function playGame(playerInput) {
 
 let reset = document.getElementById("rb");
 reset.addEventListener("click", function () {
-	console.log("test");
 	pScore = 0;
 	cScore = 0;
 	document.getElementById("pScore").textContent = pScore;
@@ -69,7 +68,7 @@ reset.addEventListener("click", function () {
 });
 
 
-let buttons = document.getElementsByClassName("button");
+const buttons = document.getElementsByClassName("button");
 
 for (let i = 0; i < buttons.length; i++) {
 	(function (index) {
